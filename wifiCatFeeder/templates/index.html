@@ -1,0 +1,13 @@
+<!doctype html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href='/static/style.css'/>
+</head>
+<body>
+{% block content %}
+<div class="control">
+<a href="{{ url_for('servoGo') }}" class="btn" >feed kitties</a><br>
+</div>
+{% endblock %}
+</body>
+</html>

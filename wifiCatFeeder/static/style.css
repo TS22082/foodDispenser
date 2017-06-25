@@ -1,0 +1,14 @@
+.control{
+text-align: center;
+}
+
+.btn{
+background-color: blue;
+color: whitesmoke;
+padding-left: 25px;
+padding-right: 25px;
+border-radius: 10px;
+font-size: 10em;
+font-family: verdana;
+margin: 40px;
+}
