@@ -13,4 +13,4 @@ Parts list:
 - 2x shafts
 - 4x shoots
 
-both stl files can be found: https://www.thingiverse.com/thing:2404483
+both STL files can be found: https://www.thingiverse.com/thing:2404483
