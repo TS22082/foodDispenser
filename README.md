@@ -9,7 +9,7 @@ Parts list:
 - 2x Spring RC SM-S4306R Continuous Rotation Robot Servo 15KG 360-degree for Robot
 - Kydex Plastic Sheet Black 12" X 12" X 1/16" (0.060")
 
-3d printed parts
+3d printed parts:
 
 - 2x shafts
 - 4x shoots
