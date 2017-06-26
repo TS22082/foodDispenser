@@ -1,4 +1,4 @@
-# foodDispenser
+# Automated Wifi Cat Food Dispenser
 
 Parts list:
 
