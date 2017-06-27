@@ -8,6 +8,8 @@ Parts list:
 - Zevro KCH-06121/GAT200 Indispensable Dry Food Dispenser, Dual Control, Black/Chrome
 - 2x Spring RC SM-S4306R Continuous Rotation Robot Servo 15KG 360-degree for Robot
 - Kydex Plastic Sheet Black 12" X 12" X 1/16" (0.060")
+- Uxcell Switch Power Supply Driver for LED Strip Light AC 110/220V 5V 2A 10W
+
 
 3d printed parts:
 
