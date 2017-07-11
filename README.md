@@ -17,3 +17,4 @@ Parts list:
 - 4x shoots
 
 Both STL files can be found: https://www.thingiverse.com/thing:2404483
+Git project page can be found at: https://ts22082.github.io/foodDispenser/
