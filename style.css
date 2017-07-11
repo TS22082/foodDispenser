@@ -1,8 +1,27 @@
-/* Remove the navbar's default margin-bottom and rounded borders */
+/* remove default center alingment */
 .table td {
    text-align: left;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.setup{
+  margin-top: 15%;
+  text-align: left;
+}
+.well {
+  text-align: left;
+  font-size: 1em;
+
+}
+
+.img-responsive{
+  display: block;
+  margin: auto;
+}
+/* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
@@ -24,8 +43,4 @@ footer {
 @media (max-width: 600px) {
 .carousel-caption {
   display: none;
-}
-
-.table td {
-   text-align: left;
 }
