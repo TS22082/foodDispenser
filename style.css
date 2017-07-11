@@ -1,4 +1,8 @@
 /* Remove the navbar's default margin-bottom and rounded borders */
+.table td {
+   text-align: left;
+}
+
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
@@ -21,4 +25,7 @@ footer {
 .carousel-caption {
   display: none;
 }
+
+.table td {
+   text-align: left;
 }
