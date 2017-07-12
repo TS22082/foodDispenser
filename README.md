@@ -18,4 +18,4 @@ Parts list:
 
 Both STL files can be found: https://www.thingiverse.com/thing:2404483
 
-Git project page can be found at: https://ts22082.github.io/foodDispenser/
+Project page can be found at: https://goo.gl/ZRDrP1
