@@ -3,6 +3,13 @@
    text-align: left;
 }
 
+.gitH{
+  color: black;
+}
+.gitH:hover{
+  color: black;
+}
+
 ul {
   list-style-type: none;
 }
