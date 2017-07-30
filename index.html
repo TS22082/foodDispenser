@@ -83,23 +83,22 @@
     <div class="col-sm-4">
       <img src="https://dl.dropboxusercontent.com/s/5a7bh7wz25soks5/graphic-timer.png" class="img-responsive" style="width:50%" alt="Image">
 
-        <p class ="setup">Set up a dispensing schedule by opening your terminal and typing: </p>
+        <p class ="setup">Set up a dispensing schedule by writing to your crontab: </p>
 
 <pre class="prettyprint">
-30 6 * * * python3 /home/pi/foodDispenserProject/servoGO.py #dispenses food every day at 6:30AM
-30 18 * * * python3 /home/pi/foodDispenserProject/servoGO.py #dispenses food every day at 6:30PM
+30 6 * * * python3 /home/pi/foodDispenserProject/servoGO.py #runs at 6:30am
+30 18 * * * python3 /home/pi/foodDispenserProject/servoGO.py # runs program at 6:30pm
 </pre>
 
     </div>
     <div class="col-sm-4">
       <img src="https://dl.dropboxusercontent.com/s/q3flsna8ujmg19w/wifi.png?dl=0" class="img-responsive" style="width:50%" alt="Image">
 
-      <p class ="setup">You may want the raspi to reboot itself to keep everything running smoothly. Todo so add this to your crontab: </p>
-
-<pre class="prettyprint">
-0 19 * * * sudo reboot #system reboots itself everyday at 7pm
-@reboot python3 /home/pi/foodDispenserProject/wifiNoms/app.py #everytime the raspi is turned on it will run the python web server
-</pre>
+      <p class ="setup">You may want the raspi to reboot itself to keep everything running smoothly. After rebooting the the rasperry pi shpuld start the web server app. Todo so add to your crontab: </p>
+      <pre class="prettyprint">
+0 19 * * * sudo reboot #reboots at 7pm
+    @reboot python3 /home/pi/foodDispenserProject/wifiNoms/app.py #starts web server at start
+      </pre>
 
     </div>
     <div class="col-sm-4">
@@ -142,87 +141,10 @@
       </div>
     </div>
 </div>
-<div class="container">
-  <div class="row">
-    <div class= "col-sm-6">
-      <pre class="prettyprint">
-        import RPi.GPIO as GPIO
-        import time
-
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setwarnings(False)
-
-        GPIO.setup(2, GPIO.OUT)
-        GPIO.setup(4, GPIO.OUT)
-
-        def servoGo ():
-
-            svo1 = GPIO.PWM(2, 50)
-            svo2 = GPIO.PWM(4, 50)
-
-            svo1.start(0)
-            svo2.start(0)
-
-            svo1.ChangeDutyCycle(12.5)#dutycycle also 2.5, 7.5, and 12.5
-            svo2.ChangeDutyCycle(12.5)
-
-            time.sleep(.75) #servo function time
-
-            svo1.ChangeDutyCycle(0)# servo off,
-            svo2.ChangeDutyCycle(0)
-
-        servoGo()
-      </pre>
-  </div>
-
-  <div class= "col-sm-6">
-    <pre class="prettyprint">
-      from flask import Flask, render_template
-
-      import RPi.GPIO as GPIO
-      import time
-
-      GPIO.setmode(GPIO.BCM)
-      GPIO.setwarnings(False)
-
-      GPIO.setup(2, GPIO.OUT)
-      GPIO.setup(4, GPIO.OUT)
-
-      app = Flask(__name__)
-
-      @app.route('/')
-      def index():
-          return render_template('index.html')
-
-      @app.route('/o')
-      def servoGo ():
-
-          svo1 = GPIO.PWM(2, 50)
-          svo2 = GPIO.PWM(4, 50)
-
-          svo1.start(0)
-          svo2.start(0)
-
-          svo1.ChangeDutyCycle(12.5)#dutycycle also 2.5, 7.5, and 12.5
-          svo2.ChangeDutyCycle(12.5)
-
-          time.sleep(.75) #servo function time
-
-          svo1.ChangeDutyCycle(0)# servo off,
-          svo2.ChangeDutyCycle(0)
-
-          return render_template('index.html')
-
-
-      if __name__ == '__main__':
-          app.run(debug=True, host= '0.0.0.0')
-        </pre>
-    </div>
-  </div>
-</div>
 
 <footer class="container-fluid text-center">
   <div class="container-fluid">
+    <h3>Download full source code on Github</h3>
     <a href="https://github.com/TS22082/foodDispenser" class="gitH"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a>
   </div>
 </footer>
