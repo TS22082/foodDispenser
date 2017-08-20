@@ -34,7 +34,7 @@
   </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -84,22 +84,17 @@
     <div class="col-sm-4">
       <img src="https://dl.dropboxusercontent.com/s/5a7bh7wz25soks5/graphic-timer.png" class="img-responsive" style="width:50%" alt="Image">
 
-        <p class ="setup">Set up a dispensing schedule by writing to your crontab: </p>
-
-<pre class="prettyprint">
-30 6 * * * python3 /home/pi/foodDispenserProject/servoGO.py #runs at 6:30am
-30 18 * * * python3 /home/pi/foodDispenserProject/servoGO.py # runs program at 6:30pm
-</pre>
+        <p class ="setup">I created this project because I needed a way to feed my cats while I was out traveling.
+                          After looking around for timed cat food dispensors online, I came to realize the options I found
+                          were either to expensive or didnt hold enough food to make it worth buying.</p>
 
     </div>
     <div class="col-sm-4">
       <img src="https://dl.dropboxusercontent.com/s/q3flsna8ujmg19w/wifi.png?dl=0" class="img-responsive" style="width:50%" alt="Image">
 
-      <p class ="setup">You may want the raspi to reboot itself to keep everything running smoothly. After rebooting the the rasperry pi should start the web server app. Todo so add to your crontab: </p>
-      <pre class="prettyprint">
-0 19 * * * sudo reboot #reboots at 7pm
-    @reboot python3 /home/pi/foodDispenserProject/wifiNoms/app.py #starts web server at start
-      </pre>
+      <p class ="setup">What I needed to do wasn't a hard task. I needed a device to spin a servo, for a certain amount of time,
+                        at a specific time, every day. At this point I realized I could save money and get exactly what I needed,
+                        while making no compromises if I just built and programmed the device myself.</p>
 
     </div>
     <div class="col-sm-4">
@@ -145,7 +140,7 @@
 
 <div class="container-fluid">
   <div align="center">
-    <video class="kitVid" controls="controls" width="100%" height="400" name="Dispener Project" scale="tofit" src="https://dl.dropboxusercontent.com/s/3a2zumt9pqkc16p/catvid.MOV?dl=0"></video>
+    <video class="kitVid" controls="controls" width="500" height="100%" name="Dispener Project" scale="tofit" src="https://dl.dropboxusercontent.com/s/3a2zumt9pqkc16p/catvid.MOV?dl=0"></video>
   </div>
 </div>
 
